@@ -1,0 +1,266 @@
+/* ============================================================
+   UTA ECUADOR - MAPA INTERACTIVO WORDPRESS
+   Archivo CSS externo
+   Subir como: adopciones-uta.css
+============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+.adop-uta-page {
+  --morado: #a93bb8;
+  --morado-oscuro: #7d2498;
+  --amarillo: #ffd34d;
+  --naranja: #ff914d;
+  --gris: #d9d9d9;
+  --texto: #4b3f54;
+
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  font-family: 'Patrick Hand', Arial, sans-serif;
+  background: #a93bb8;
+}
+
+.adop-uta-page * {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.adop-uta-section {
+  position: relative;
+  width: 100%;
+  padding: 32px 28px 90px;
+  background:
+    linear-gradient(rgba(150, 40, 170, .88), rgba(150, 40, 170, .88)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(80, 20, 90, .18) 0px,
+      rgba(80, 20, 90, .18) 3px,
+      transparent 3px,
+      transparent 118px
+    );
+}
+
+.adop-uta-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 72px;
+  background: var(--naranja);
+  z-index: 1;
+}
+
+.adop-uta-content {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  display: block;
+}
+
+.adop-map-wrap {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.adop-map-box {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.adop-map-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.adop-map-img.is-changing {
+  opacity: .25;
+  transform: scale(.985);
+}
+
+.adop-current-info {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 10;
+  max-width: 320px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 12px 24px rgba(60, 20, 80, .25);
+  color: var(--texto);
+  line-height: 1.2;
+}
+
+.adop-current-info h3 {
+  margin: 0 0 6px;
+  color: #7d2498;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.adop-current-info p {
+  margin: 2px 0;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.adop-current-info strong {
+  color: #7d2498;
+}
+
+.adop-uta-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(360px, 34%);
+  height: 100%;
+  overflow-y: auto;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 10px 20px;
+  background: rgba(55, 8, 80, 0.82);
+  backdrop-filter: blur(6px);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,211,77,.5) transparent;
+}
+
+.adop-uta-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.adop-uta-list::-webkit-scrollbar-thumb {
+  background: rgba(255,211,77,.45);
+  border-radius: 3px;
+}
+
+.adop-uta-card {
+  width: 100%;
+  border: 2px solid rgba(255,255,255,.45);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(52, 18, 72, .18);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.adop-uta-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(52, 18, 72, .26);
+}
+
+.adop-uta-card.is-active {
+  border-color: var(--amarillo);
+  box-shadow:
+    0 0 0 4px rgba(255, 211, 77, .35),
+    0 14px 24px rgba(52, 18, 72, .28);
+}
+
+.adop-uta-head {
+  display: none;
+}
+
+.adop-uta-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 10px 14px 12px;
+  line-height: 1.2;
+}
+
+.adop-ciudad {
+  color: #7d2498;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+
+.adop-uta-body > div:nth-child(2) {
+  font-size: 11.5px;
+  color: #6b6070;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.adop-uta-body > div:nth-child(2)::before {
+  content: "Cob. ";
+  color: #a080b0;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.adop-tel {
+  font-size: 11.5px;
+  color: #7d2498;
+  font-weight: 900;
+  line-height: 1.4;
+  margin-top: 3px;
+}
+
+.adop-tel::before {
+  content: "Tel. ";
+  color: #a080b0;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+@media (max-width: 1100px) {
+  .adop-uta-list {
+    width: min(300px, 38%);
+  }
+}
+
+@media (max-width: 700px) {
+  .adop-uta-section {
+    padding: 20px 0 80px;
+  }
+
+  .adop-map-box {
+    margin-top: 0;
+  }
+
+  .adop-uta-list {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    background: rgba(55, 8, 80, 0.92);
+    margin-top: 10px;
+    border-radius: 0;
+  }
+
+  .adop-uta-body {
+    padding: 13px 15px;
+  }
+
+  .adop-ciudad {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .adop-uta-body > div:nth-child(2),
+  .adop-tel {
+    font-size: 13px;
+  }
+
+  .adop-current-info {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    max-width: calc(100% - 24px);
+    margin: 12px auto 0;
+  }
+}
