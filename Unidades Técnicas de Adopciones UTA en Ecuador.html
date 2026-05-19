@@ -1,0 +1,163 @@
+<!-- ============================================================
+     UTA ECUADOR - MAPA INTERACTIVO WORDPRESS
+     CSS Y JS CARGADOS DESDE GITHUB / JSDELIVR
+     PEGAR EN BLOQUE HTML PERSONALIZADO
+============================================================ -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ivian55/wordpress-adopciones@main/adopciones-uta.css?v=1">
+
+<div class="adop-uta-page">
+  <section class="adop-uta-section">
+    <div class="adop-uta-content">
+
+      <div class="adop-map-wrap">
+        <div class="adop-map-box">
+
+          <img 
+            id="adopMapaPrincipal" 
+            class="adop-map-img" 
+            src="https://www.desarrollohumano.gob.ec/wp-content/uploads/2026/05/mapa-1Adopciones-web-01.png" 
+            alt="Mapa Unidades Técnicas de Adopciones en Ecuador"
+          >
+
+          <div class="adop-current-info">
+            <h3 id="adopInfoCiudad">Mapa general</h3>
+            <p>
+              <strong>Cobertura:</strong> 
+              <span id="adopInfoCobertura">Todas las UTA del Ecuador</span>
+            </p>
+            <p>
+              <strong>Teléfono:</strong> 
+              <span id="adopInfoTelefono">Seleccione una ciudad</span>
+            </p>
+          </div>
+
+          <div class="adop-uta-list" id="adopUtaList">
+
+            <div class="adop-uta-card" data-uta="quito">
+              <div class="adop-uta-head">
+                <span>Ciudad - UTA</span>
+                <span>Cobertura</span>
+                <span>Teléfono</span>
+              </div>
+              <div class="adop-uta-body">
+                <div class="adop-ciudad">QUITO</div>
+                <div>Pichincha</div>
+                <div class="adop-tel">02 2905004</div>
+              </div>
+            </div>
+
+            <div class="adop-uta-card" data-uta="ibarra">
+              <div class="adop-uta-head">
+                <span>Ciudad - UTA</span>
+                <span>Cobertura</span>
+                <span>Teléfono</span>
+              </div>
+              <div class="adop-uta-body">
+                <div class="adop-ciudad">IBARRA</div>
+                <div>Carchi - Esmeraldas<br>Imbabura - Sucumbíos</div>
+                <div class="adop-tel">06 2641246<br>Ext. 3070</div>
+              </div>
+            </div>
+
+            <div class="adop-uta-card" data-uta="tena">
+              <div class="adop-uta-head">
+                <span>Ciudad - UTA</span>
+                <span>Cobertura</span>
+                <span>Teléfono</span>
+              </div>
+              <div class="adop-uta-body">
+                <div class="adop-ciudad">TENA</div>
+                <div>Pichincha excepto Quito<br>Napo - Orellana</div>
+                <div class="adop-tel">06 2847454<br>Ext. 3757</div>
+              </div>
+            </div>
+
+            <div class="adop-uta-card" data-uta="ambato">
+              <div class="adop-uta-head">
+                <span>Ciudad - UTA</span>
+                <span>Cobertura</span>
+                <span>Teléfono</span>
+              </div>
+              <div class="adop-uta-body">
+                <div class="adop-ciudad">AMBATO</div>
+                <div>Pastaza - Cotopaxi<br>Tungurahua - Chimborazo</div>
+                <div class="adop-tel">03 2410377 - 03 2410306<br>Ext. 105 - 107</div>
+              </div>
+            </div>
+
+            <div class="adop-uta-card" data-uta="portoviejo">
+              <div class="adop-uta-head">
+                <span>Ciudad - UTA</span>
+                <span>Cobertura</span>
+                <span>Teléfono</span>
+              </div>
+              <div class="adop-uta-body">
+                <div class="adop-ciudad">PORTOVIEJO</div>
+                <div>Manabí - Santo Domingo<br>de los Tsáchilas</div>
+                <div class="adop-tel">05 2564336 - 05 2563577<br>05 2564190 Ext. 4564</div>
+              </div>
+            </div>
+
+            <div class="adop-uta-card" data-uta="babahoyo">
+              <div class="adop-uta-head">
+                <span>Ciudad - UTA</span>
+                <span>Cobertura</span>
+                <span>Teléfono</span>
+              </div>
+              <div class="adop-uta-body">
+                <div class="adop-ciudad">BABAHOYO</div>
+                <div>Los Ríos - Santa Elena<br>Bolívar - Galápagos - Guayas</div>
+                <div class="adop-tel">05 2735872</div>
+              </div>
+            </div>
+
+            <div class="adop-uta-card" data-uta="cuenca">
+              <div class="adop-uta-head">
+                <span>Ciudad - UTA</span>
+                <span>Cobertura</span>
+                <span>Teléfono</span>
+              </div>
+              <div class="adop-uta-body">
+                <div class="adop-ciudad">CUENCA</div>
+                <div>Azuay - Cañar<br>Morona Santiago</div>
+                <div class="adop-tel">07 2888421 - 07 2888413<br>Ext. 131 - 132</div>
+              </div>
+            </div>
+
+            <div class="adop-uta-card" data-uta="loja">
+              <div class="adop-uta-head">
+                <span>Ciudad - UTA</span>
+                <span>Cobertura</span>
+                <span>Teléfono</span>
+              </div>
+              <div class="adop-uta-body">
+                <div class="adop-ciudad">LOJA</div>
+                <div>El Oro - Loja<br>Zamora Chinchipe</div>
+                <div class="adop-tel">07 2545533 - 07 2581064<br>Ext. 141</div>
+              </div>
+            </div>
+
+            <div class="adop-uta-card" data-uta="guayaquil">
+              <div class="adop-uta-head">
+                <span>Ciudad - UTA</span>
+                <span>Cobertura</span>
+                <span>Teléfono</span>
+              </div>
+              <div class="adop-uta-body">
+                <div class="adop-ciudad">GUAYAQUIL</div>
+                <div>Guayas - Durán<br>Samborondón</div>
+                <div class="adop-tel">04 3714780<br>Ext. 10506 - 10505</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/ivian55/wordpress-adopciones@main/adopciones-uta.js?v=1"></script>
